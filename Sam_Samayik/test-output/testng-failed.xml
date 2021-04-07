@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Sam_Samayik.scripts.TestInvalidUserLogin">
+      <class name="Sam_Samayik.scripts.TestAll">
         <methods>
-          <include name="test_InvalidUserLogin"/>
+          <include name="all"/>
         </methods>
-      </class> <!-- Sam_Samayik.scripts.TestInvalidUserLogin -->
+      </class> <!-- Sam_Samayik.scripts.TestAll -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

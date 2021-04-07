@@ -5,10 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import Sam_Samayik.generics.BaseTest;
+
 public class CurrentNewsPage {
 
+	
 
-	@FindBy(xpath="(//a[text()='View All'])[1]")
+	@FindBy(xpath="(//a[text()='View All'])[2]")
 	private WebElement viewall;
 	
 	
@@ -47,6 +50,14 @@ public class CurrentNewsPage {
 	@FindBy(xpath = "//strong[text()='Current Live']")
 	private WebElement currentLive;
 	
+
+	@FindBy(id = "comment")
+	private WebElement C;
+	
+	@FindBy(id = "addcomment")
+	private WebElement add;
+	
+	
 	
 	
 	public CurrentNewsPage(WebDriver driver)
@@ -69,28 +80,76 @@ public class CurrentNewsPage {
 		gridView.click();
 	}
 	
-	public void clickOnElectricCurrent_Course()
+	public void clickOnElectricCurrent_Course() throws InterruptedException
 	{
+		int h = ElectricCurrent.getSize().getHeight();
+		int w = ElectricCurrent.getSize().getWidth();
+	   System.out.println("hight of the ElectricCurrent news Thumbnail is "+h);
+		System.out.println("width of the ElectricCurrent news Thumbnail  is "+w);
+		Thread.sleep(1000);
+		
 		ElectricCurrent.click();
 	}
 	
-	public void clickOnRealmiX7Pro()
+	public void clickOnRealmiX7Pro() throws InterruptedException
 	{
+		int h = Realme_X7_Pro.getSize().getHeight();
+		int w = Realme_X7_Pro.getSize().getWidth();
+	   System.out.println("hight of the Realme_X7_Pro news Thumbnail is "+h);
+		System.out.println("width of the Realme_X7_Pro news Thumbnail  is "+w);
+		Thread.sleep(1000);
+
+		
 		Realme_X7_Pro.click();
 	}
 	
-	public void clickOnScienceDaily()
+	public void clickOnScienceDaily() throws InterruptedException
 	{
+		
+		int h = ScienceDaily.getSize().getHeight();
+		int w = ScienceDaily.getSize().getWidth();
+	   System.out.println("hight of the ScienceDaily news Thumbnail is "+h);
+		System.out.println("width of the ScienceDaily news Thumbnail  is "+w);
+		Thread.sleep(1000);
+		
 		ScienceDaily.click();
 	}
 	
-	public void  clickOnPatrika()
+	public void  clickOnPatrika() throws InterruptedException
 	{
+
+		int h = patrika.getSize().getHeight();
+		int w = patrika.getSize().getWidth();
+	   System.out.println("hight of the patrika news Thumbnail is "+h);
+		System.out.println("width of the patrika news Thumbnail  is "+w);
+		
+		Thread.sleep(1000);
+
+		
 		patrika.click();
 	}
 	
-	 public void clickOnCurrentLive()
+	 public void clickOnCurrentLive() throws InterruptedException
 	 {
+		 int h = currentLive.getSize().getHeight();
+			int w = currentLive.getSize().getWidth();
+		   System.out.println("hight of thecurrentLive news Thumbnail is "+h);
+			System.out.println("width of the currentLive news Thumbnail  is "+w);
+			Thread.sleep(1000);
+
+
+			
 		 currentLive.click();
 	 }
+	 
+	 public void write_Comment(String Comment)
+	 {
+		 C.sendKeys(Comment);
+	 }
+	 public void clickOn_addComment_Send()
+	 {
+		 add.click();
+	 }
+	 
+	 
 }

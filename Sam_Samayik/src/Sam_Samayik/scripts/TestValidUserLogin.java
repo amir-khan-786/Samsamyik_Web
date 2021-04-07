@@ -23,7 +23,7 @@ public static void valid_User_Login() throws InterruptedException, IOException {
 	openBrowser("chrome");
 	
 	
-	FWUtils.verifyURL(driver, "http://65.0.58.104:8777/index.php/web_new/home");
+	FWUtils.verifyURL(driver, "http://65.0.58.104:8777/index.php/web_new/home","URl of the Home Page Before Login ");
 	screenShot("./photo/homePage.png");
 	scrollDownByAxies("window.scrollBy(0,9000);");
 	
@@ -44,9 +44,11 @@ public static void valid_User_Login() throws InterruptedException, IOException {
 	  lp.enterPassword("12345678");
 	  Thread.sleep(1000);
 	  lp.clickOnContinueBTN(); 
-	  System.out.println("Title of Login Page ");
+	  Thread.sleep(500);
+	  FWUtils.verifyLogin(driver, "Amir Khan Pathan");
+	
 
-		FWUtils.verifyURL(driver, "http://65.0.58.104:8777/index.php/web_new/home");
+		FWUtils.verifyURL(driver, "http://65.0.58.104:8777/index.php/web_new/home", "URL of the Home Page After Login ");
 	  home.clickONGuestName();
 	  Thread.sleep(500);
 	  home.clickOnLogoutBTN();
@@ -54,7 +56,8 @@ public static void valid_User_Login() throws InterruptedException, IOException {
 	  System.out.println("Test Case is Pass Enjoy");
 	  Thread.sleep(500);
 
-		FWUtils.verifyURL(driver, "http://65.0.58.104:8777/index.php/web_new/home");
+		FWUtils.verifyURL(driver, "http://65.0.58.104:8777/index.php/web_new/home","URl of the Home Page  After Logout");
+		
 		  Thread.sleep(500);
 
 	  closeBrowser();

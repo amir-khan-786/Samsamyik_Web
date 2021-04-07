@@ -43,7 +43,7 @@ abstract public class BaseTest implements IAutoConstant
 		
 		driver.manage().timeouts().implicitlyWait(ITO,TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		driver.get(URL);
+		driver.navigate().to(URL);
 	}
 	
 	
@@ -85,11 +85,6 @@ abstract public class BaseTest implements IAutoConstant
 		jse.executeScript("window.scrollBy(0,"+yaxis+")");
 
 	}
-
-	
-	
-	
-	
 	
 	public static void closeBrowser()
 	{

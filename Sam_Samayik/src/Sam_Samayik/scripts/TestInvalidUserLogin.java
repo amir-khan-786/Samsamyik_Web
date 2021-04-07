@@ -22,7 +22,7 @@ public static void test_InvalidUserLogin() throws InterruptedException {
 	Thread.sleep(1000);
 	
 	
-	FWUtils.verifyURL(driver,"http://65.0.58.104/index.php/web_new/Home");
+	FWUtils.verifyURL(driver, URL,"URl of the Page Before Login ");
 	
 	HomePage home= new HomePage(driver);
 	home.Sign_IN();
@@ -110,10 +110,9 @@ public static void test_InvalidUserLogin() throws InterruptedException {
 	
 	Thread.sleep(500);
 
-	FWUtils.verifyURL(driver,"http://65.0.58.104/index.php/web_new/home");
-
-	Thread.sleep(500);
-
+	FWUtils.verifyURL(driver, URL,"URl of the Page  Before  Login ");
+ Thread.sleep(500);
+ 
 	
 	System.out.println("Test case is Pass ");
 	

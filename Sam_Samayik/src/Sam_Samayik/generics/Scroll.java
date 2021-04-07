@@ -3,6 +3,7 @@ package Sam_Samayik.generics;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriver.Window;
 import org.openqa.selenium.WebElement;
 
 public class Scroll {
@@ -21,20 +22,22 @@ public class Scroll {
 	}
 	
 	
-	public static void scrollDownByElementLocation( String pathvalue) throws InterruptedException
+	public static void scrollDownByElementLocation( String cNewsLocation) throws InterruptedException
 	{
 		
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		
-		WebElement cNews = driver.findElement(By.xpath(pathvalue));
+		WebElement cNews = driver.findElement(By.xpath(cNewsLocation));
 		
 		int yaxis = cNews.getLocation().getY();
+		Thread.sleep(500);
 
 		jse.executeScript("window.scrollBy(0,"+yaxis+")");
 
 	}
+
 
 	
 }

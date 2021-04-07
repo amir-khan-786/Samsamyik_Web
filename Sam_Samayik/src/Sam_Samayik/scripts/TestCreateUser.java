@@ -17,7 +17,7 @@ public static void main(String[] args) throws InterruptedException {
 	openBrowser("chrome");
 	
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	FWUtils.verifyURL(driver, URL);
+	FWUtils.verifyURL(driver, URL,"URl of the Page Before Login ");
 	
 	HomePage home= new HomePage(driver);
 	home.Sign_IN();
@@ -61,7 +61,7 @@ public static void main(String[] args) throws InterruptedException {
 	ca.SizeOF_continueBTN();
 	ca.ClickOnContinueBTN();
 	
-	FWUtils.verifyURL(driver, URL);
+	
 
 	ca.clickOnMoileAlreadyExistPopUPs();
 	
@@ -69,7 +69,7 @@ public static void main(String[] args) throws InterruptedException {
 	
      System.out.println("Test case is Pass ");
      
-    // driver.close();
+    driver.close();
 
 }
 	

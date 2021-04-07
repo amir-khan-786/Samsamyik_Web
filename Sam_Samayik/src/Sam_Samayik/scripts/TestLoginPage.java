@@ -16,7 +16,7 @@ public class TestLoginPage extends BaseTest{
 		
 		openBrowser("chrome");
 		Thread.sleep(1000);
-		FWUtils.verifyURL(driver,"http://65.0.58.104/index.php/web_new/Home");
+		FWUtils.verifyURL(driver, URL,"URl of the Page Before Login ");
 		screenShot("./photo/homePage.png");
 		scrollDownByAxies("window.scrollBy(0,9000);");
 		
@@ -25,7 +25,7 @@ public class TestLoginPage extends BaseTest{
 
 		HomePage home= new HomePage(driver);
 		home.Sign_IN();
-       
+    
 		LoginPage lp = new LoginPage(driver);
 		Thread.sleep(500);
 	    lp.SizeOF_userNameTextBox();
@@ -39,9 +39,11 @@ public class TestLoginPage extends BaseTest{
 		
 		lp.clickOnContinueBTN();
 	
-		FWUtils.verifyURL(driver,"http://65.0.58.104/index.php/web_new/Home");
+		FWUtils.verifyURL(driver, URL,"URl of the Page After Login ");
 		
-		
+		System.out.println("Login  Test Case is pass ");
+	     driver.close();
+
 	   
 }
 }
