@@ -307,7 +307,7 @@ public static void all() throws InterruptedException, IOException {
 		 	// Current News  
 		 	openBrowser("chrome");
 			 
-			driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 			HomePage home5= new HomePage(driver);
 			home5.Sign_IN();
 			
