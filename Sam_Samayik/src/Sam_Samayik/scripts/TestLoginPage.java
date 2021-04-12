@@ -42,8 +42,7 @@ public class TestLoginPage extends BaseTest{
 		FWUtils.verifyURL(driver, URL,"URl of the Page After Login ");
 		
 		System.out.println("Login  Test Case is pass ");
-	     driver.close();
-
+	   
 	   
 }
 }
